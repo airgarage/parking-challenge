@@ -1,0 +1,6 @@
+name,address_line1,city,state,latitude,longitude,location_type,base_price
+Leo's Spot,1214 S Farmer Ave,Tempe,AZ,33.415467,-111.944514,STANDARD_LOCATION,10.0
+Aly's Driveway,539 W 17th Street,Tempe,AZ,33.410819,-111.946887,ECONOMY_LOCATION,7.0
+Lorraine's parking spot,1208 S Mill Ave,Tempe,AZ,33.415662,-111.940287,PREMIUM_LOCATION,15.0
+Josh's Driveway,505 W. 14th Street,Tempe,AZ,33.413700,-111.946253,STANDARD_LOCATION,10.0
+Sonny's Garage,830 East Bruce Avenue,Gilbert,AZ,33.352414,-111.771749,ECONOMY_LOCATION,7.0
