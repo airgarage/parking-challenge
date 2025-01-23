@@ -79,7 +79,7 @@ def process_parking_spots(csv_file: str, api_key: str) -> List[ParkingSpot]:
 
 
 def main():
-    API_KEY = "YOUR_API_KEY"
+    API_KEY = "PROVIDED_API_KEY"
     spots = process_parking_spots("parking_spots.csv", API_KEY)
 
     for spot in spots:
