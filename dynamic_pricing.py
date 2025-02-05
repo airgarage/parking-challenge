@@ -48,7 +48,7 @@ def main():
         result = response
         spot.walk_score = result['walkscore']
         spot.calculate_dynamic_price()
-        print(f"{spot.name}: base price is ${spot.base_price:.2f} and current_price is ${spot.current_price:.2f}")
+        print(f"{spot.name} with a walk score of {spot.walk_score}: base price is ${spot.base_price:.2f} and current_price is ${spot.current_price:.2f}")
 
 
 if __name__ == "__main__":

@@ -12,6 +12,6 @@ TIME_MULTIPLIERS = {
 
 # Walk Score Multiplier Configuration
 WALK_SCORE_MULTIPLIER = {
-    "MIN": 0.8,
-    "MAX": 2.0
+    "MIN": 0.3,
+    "MAX": 0.7
 }
