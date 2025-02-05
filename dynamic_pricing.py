@@ -57,14 +57,13 @@ def process_parking_spots(csv_file: str, api_key: str) -> List[ParkingSpot]:
 
     with open(csv_file) as f:
         reader = csv.reader(f)
-        next(reader)  # Skip header
         spots = [ParkingSpot(row) for row in reader]
 
     for spot in spots:
         try:
             api_url = get_walk_score_api(spot, api_key)
             response = requests.get(api_url)
-            result = response.json()
+            result = response
 
             spot.walk_score = result['walkscore']
             spot.walk_description = result['description']
