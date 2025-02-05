@@ -2,14 +2,13 @@ import requests
 from datetime import datetime
 from typing import List
 
-
 class ParkingSpot:
     def __init__(self, spot_data: List[str]):
         self.name = spot_data[0]
         self.address = f'{spot_data[1]} {spot_data[2]} {spot_data[3]}'
         self.lat = spot_data[4]
         self.lon = spot_data[4]
-        self.base_price = float(spot_data[7])
+        self.base_price = spot_data[7]
         self.walk_score = None
         self.current_price = None
 
@@ -27,17 +26,15 @@ class ParkingSpot:
     def calculate_dynamic_price(self) -> float:
         if not self.walk_score:
             return self.base_price
-
         time_multiplier = self._get_time_multiplier()
         popularity_multiplier = self._get_time_multiplier()
 
         return self.base_price * time_multiplier * popularity_multiplier
 
-
 def get_spots(filename: str) -> List[ParkingSpot]:
-    spots_file = open(filename)
-    spots = list(csv.reader(spots_file))
-    spots = [ParkingSpot(spot) for spot in spots]
+    with open(filename) as spots_file:
+        reader = csv.reader(spots_file)
+        spots = [ParkingSpot(row) for row in reader]
     return spots
 
 

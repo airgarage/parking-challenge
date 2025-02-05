@@ -3,7 +3,7 @@
 # API Configuration
 WALK_SCORE_API_KEY = "YOUR_API_KEY"
 
-# Pricing Configuration
+# Time Multiplier Configuration
 TIME_MULTIPLIERS = {
     "BUSINESS_HOURS": 1.5,  # 9AM - 5PM
     "EVENING_HOURS": 2.0,   # 5PM - 11PM
